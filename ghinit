@@ -1,0 +1,5 @@
+#!/bin/sh
+git init
+echo "# +$1+" >> README.md
+git add README.md
+git commit -m 'first commit'
