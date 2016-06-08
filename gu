@@ -1,0 +1,17 @@
+#!/bin/bash
+#OSXでクリップボードにあるURLをいい感じにパースしてgit cloneしてくれる奴
+#使い方
+#1. cloneしたいリポジトリのURLをコピー
+#2. sh gu.sh
+#3. やったぜ
+
+cur_dir=`pwd`
+url=`pbpaste`
+result=`echo $url | sed -E "s/https:\/\/|http:\/\//src\//"`
+result=`echo $result | sed -E "s/git@/src\//"`
+result=`echo $result | sed -E 's/:/\//'`
+cd ${HOME}
+mkdir -vp ${result}
+cd ${result}
+git clone ${url}
+cd ${cur_dir}
