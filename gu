@@ -13,5 +13,5 @@ result=`echo $result | sed -E 's/:/\//'`
 cd ${HOME}
 mkdir -vp ${result}
 cd ${result}
+cd ..
 git clone ${url}
-cd ${cur_dir}

@@ -1,0 +1,3 @@
+#!/bin/bash
+now=`date +"%Y/%m/%d %H:%M:%S"`
+echo -e "Title: 最初のPelicanブログ\nDate: ${now}\nCategory: Pelican\nTags: \nSlug: \nAuthor:himanoa \nSummary: 記事の要約です。\n"
